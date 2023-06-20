@@ -1,0 +1,2 @@
+#!/bin/bash
+export CFILE=2-main.c | touch cisfun | chmod u+x cisfun | ./3-name 
