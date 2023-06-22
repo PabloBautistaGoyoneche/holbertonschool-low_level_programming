@@ -4,9 +4,7 @@
 
 /**
  * main - Entry point
- *
  * Return: Always 0 (Success)
- *
  */
 int main(void)
 {
@@ -15,9 +13,10 @@ int main(void)
 
 	for (caracter = 'a'; caracter <= 'z'; caracter++)
 		putchar(caracter);
+
 	for (caracter_m = 'A'; caracter_m <= 'Z'; caracter_m++)
 		putchar(caracter_m);
-		putchar ('\n');
+	putchar ('\n');
 
 	return (0);
 }
