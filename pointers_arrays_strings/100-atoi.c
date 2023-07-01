@@ -2,22 +2,36 @@
 #include <stdio.h>
 
 /**
- * _strcpy - function copies string pointed to by src
- * @dest: pointer objetive
- * @src: pointer initial data
+ * _atoi - function convert a string to an integer
+ * @s: The pointer to convert
  * Return: 0
  */
 
-char *_strcpy(char *dest, char *src)
+int _atoi(char *s)
 {
-	char *dest_start = dest;
+	int c = 0;
+	unsigned int ni = 0;
+	int min = 1;
+	int isi = 0;
 
-	while (*src != '\0'
+	while (s[c])
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		if (s[c] == 45)
+		{
+			min *= -1;
+		}
+		while (s[c] >= 48 && s[c] <= 57)
+		{
+			isi = 1;
+			ni = (ni * 10) + (s[c] - '0');
+			c++;
+		}
+		if (isi == 1)
+		{
+			break;
+		}
+		c++;
 	}
-	*dest = '\0';
-	return (dest_start);
+	ni *= min;
+	return (ni);
 }
